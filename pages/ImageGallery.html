@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title> Image Gallery </title>
+
+ <!-- Use css file to format this webpages -->
+
+<!--  css file inline in the img gallery -->
+<style>
+
+body {background-color: rgba(180, 130, 90, 0.5);
+      font-family: "Times New Roman", Times, serif;
+      margin: 0}
+      
+a {
+    text-decoration: none;
+    color: maroon;
+    padding: 8px 8px 8px 8px;
+}
+
+a:hover {
+  color: darkblue;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* img in the middle and set max width to avoid too huge img */
+img {
+  vertical-align: middle;
+  max-width: 780px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+/* hover to the images will show the clears signs to click the previous or next img */
+
+
+.footer {
+
+  letter-spacing: 2px;
+  line-height: 1.5;
+  background-color: #f7ddbb;
+  text-align: center;
+  padding: 15px;
+  
+  column-count: 3;
+  column-gap: 50px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2 style="text-align:center">Slideshow Gallery for my own Paintings and Drawings</h2>
+<!--  the container to show the iamges -->
+<div class="container">
+
+  <!--  there are 12 iamges you can click to see the images sliders -->
+  <div class="mySlides">
+  <!-- show the number txt of labelled img  -->
+    <div class="numbertext">1 / 12</div>
+    <!-- set the demo image  -->
+    <img src="../images/butterfly.png" width=700 alt="butterfly">
+ 
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 12</div>
+    <img src="../images/carambola.png" width=700 alt="carambola">
+  </div>
+  
+  <div class="mySlides">
+  <div class="numbertext">3 / 12</div>
+  <img src="../images/chocolatecake.png" width=700 alt="chocolate cake">
+  </div>
+  
+  <div class="mySlides">
+  <div class="numbertext">4 / 3</div>
+  <img src="../images/colorcard.png" width=700 alt="color card">
+  </div>
+  
+  <div class="mySlides">
+  <div class="numbertext">5 / 3</div>
+  <img src="../images/dandelion.png" width=700 alt="dandelion">
+  </div>
+    
+    
+  <div class="mySlides">
+  <div class="numbertext">6 / 3</div>
+  <img src="../images/eggrice.png" width=700 alt="egg rice">
+  </div>
+  
+  <div class="mySlides">
+  <div class="numbertext">7 / 3</div>
+  <img src="../images/house.png" width=700 alt="house">
+  </div>
+
+
+  <div class="mySlides">
+  <div class="numbertext">8 / 3</div>
+  <img src="../images/orange.png" width=700 alt="orange">
+  </div>
+
+  <div class="mySlides">
+  <div class="numbertext">9 / 3</div>
+  <img src="../images/rose.png" width=700 alt="rose">
+  </div>
+  
+  <div class="mySlides">
+  <div class="numbertext">10 / 3</div>
+  <img src="../images/squirrel.png" width=700 alt="squirrel">
+  </div>
+
+  <div class="mySlides">
+  <div class="numbertext">11 / 3</div>
+  <img src="../images/swan.png" width=700 alt="swan">
+  </div>
+  
+  <div class="mySlides">
+  <div class="numbertext">12 / 3</div>
+  <img src="../images/tea.png" width=700 alt="tea">
+  </div>
+
+  <!-- the sign to choose the previous image or the next image   -->
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+  
+  <div class="clear">
+  </div>
+
+  <div class="row">
+    <!-- 2 rows of images to index; users can click on the cursors to see the specific iamge  -->
+    <!-- when click to see which current slide is -->
+    <!-- to show the text of the image as backgrounds  -->
+    <div class="column">
+    <img class="demo cursor" src="../images/butterfly.png" style="width:100%" onclick="currentSlide(1)" 
+    alt="Butterfly: A pencil skecthing of a butterfly on the flower">   
+    </div>
+    
+    <div class="column">
+    <img class="demo cursor" src="../images/carambola.png" style="width:100%" onclick="currentSlide(2)" 
+    alt="Carambola: Green carambola pieces by watercolour paining">
+    </div>
+    
+    <div class="column">
+    <img class="demo cursor" src="../images/chocolatecake.png" style="width:100%" onclick="currentSlide(3)" 
+    alt="Chocolate cake: Colour pencil drawing of Chocolate cake with strawberries and cream">
+    </div>
+        
+    <div class="column">
+    <img class="demo cursor" src="../images/colorcard.png" style="width:100%" onclick="currentSlide(4)" 
+    alt="Color-card: Self made Color-card of 48 watercolor solid watercolor paint set">
+    </div>
+    
+    <div class="column">
+    <img class="demo cursor" src="../images/dandelion.png" style="width:100%" onclick="currentSlide(5)" 
+    alt="Dandelion: Watercolour dandelion scene during the sunrise">
+    </div>
+    
+
+    <div class="column">
+    <img class="demo cursor" src="../images/eggrice.png" style="width:100%" onclick="currentSlide(6)" 
+    alt="Omurice: Egg and fried rice which is a Japanese food">
+    </div>
+    
+    <div class="column">
+    <img class="demo cursor" src="../images/house.png" style="width:100%" onclick="currentSlide(7)" 
+    alt="House: a watercolour painting of house with different colours">
+    </div>
+    
+    <div class="column">
+    <img class="demo cursor" src="../images/orange.png" style="width:100%" onclick="currentSlide(8)" 
+    alt="Orange: watercolour painting of 2 pieces of oranges">
+    </div>
+    
+    <div class="column">
+    <img class="demo cursor" src="../images/rose.png" style="width:100%" onclick="currentSlide(9)" 
+    alt="A rose: This is the my first watercolor painting which is a pink rose">
+    </div>
+    
+    <div class="column">
+    <img class="demo cursor" src="../images/squirrel.png" style="width:100%" onclick="currentSlide(10)" 
+    alt="A squirrel: This is sketching of fuzzy squirrel">
+    </div>
+    
+    <div class="column">
+    <img class="demo cursor" src="../images/swan.png" style="width:100%" onclick="currentSlide(11)" 
+    alt="A swan: This is my first sketching in Australia">
+    </div>
+    
+    <div class="column">
+    <img class="demo cursor" src="../images/tea.png" style="width:100%" onclick="currentSlide(12)" 
+    alt="A cup of tea: a watercolour painting of a cup of black tea">
+    </div>
+
+  </div>
+  
+<!-- put the image button on the button of the website  -->  
+<div id="imagebuttonbottom">
+  <h3> If you like my website, please click like and share with your friends below or follow my twitter page.</h3>
+
+	<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpartch.anu.edu.au.virtual.anu.edu.au%2F~u6277483%2Fpages%2FImageGallery.html&width=450&layout=standard&action=like&size=small&share=true&height=35&appId" width="450" 
+	height="35" style="border:none;overflow:hidden"
+	 allow="encrypted-media"></iframe>
+
+	<!-- facebook share and like button  --> 
+	
+	<div class="clear"></div>
+	<!--  twitter follow button --> 
+	<a class="twitter-follow-button"
+  	href="https://twitter.com/YevenLourance"
+  	data-size="large">
+	Follow @TwitterDev</a>
+	<script async src="https://platform.twitter.com/widgets.js"></script>
+</div>
+
+
+ <h3> If you want to see more about my twitter pages, here is the twitter feed.</h3>
+   		<!--  twitter feeds page  --> 
+        <a class="twitter-timeline" data-width="300" data-height="500" 
+        href="https://twitter.com/YevenLourance">Tweets by Zeruo</a> 
+        <script async src="https://platform.twitter.com/widgets.js"></script>
+ 
+ <br>
+</div>
+
+
+<!-- inline js scripts to show the labels number of the sliders  -->
+<!--  if we click the next or last page, we will see the specific img -->
+<!--  if the number is blocked, it will jump to the first image -->
+<!--  the number of page is counted on the left size while clicking --> 
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  
+  
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+<div class="footer">
+<!--  the footer show all the links of this website -->
+<a href="../index.html">Index</a>
+
+<br>
+
+<a href="Passion.html">My Passion</a>
+
+<br>
+
+<a href="ImageMap.html">Image Map</a>
+
+<br>
+
+<a href="ImageGallery.html">Image Gallery</a>
+
+<br>
+
+<a href="Storyboard.html">Story Board</a>
+
+<br>
+
+<a href="Video.html">Video</a>
+
+<br>
+
+<a href="SourceLog.html">Source Log</a>
+
+<br>
+
+<a href="SiteMap.html">Site Map</a>
+
+<br>
+
+<a href="Feedback.html">Feedback</a>
+<br>
+
+<a href="DrawingBoard.html">Draw board</a>
+
+<br>
+
+<a href="Reflection.html">Reflection</a>
+</div>
+</body>
+</html>

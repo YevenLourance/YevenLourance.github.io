@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title> Image Map </title>
+<link rel="stylesheet" href="style.css">
+ <!-- Use my css file to format this webpage -->
+ 
+</head>
+
+
+<h1>Image Map</h1>
+
+<img src="../images/Venice.png" alt="Venice" usemap="#Venice" width = 360>
+<!--  5 img map with the coordinations and the links, we will jump to the settled page when we click -->
+<map name="Venice">
+  <!-- rectangle iamge map links  -->
+  <area shape="rect" coords="0,0,360,80" href = "https://www.skylinewebcams.com/en/webcam/italia/veneto/venezia/riva-schiavoni.html" alt="Sky" onclick="mysky()" title = "sky">
+  <area shape="rect" coords="170,80,220,198" href = "https://www.ancient-origins.net/ancient-places-europe/construction-venice-floating-city-001750" alt="Building" onclick="mybuilding()" title = "Venice building">
+  <area shape="rect" coords="160,200,215,250" href = "https://en.venezia.net/venice-tourist-information.html" alt="People" onclick="mypeople()" title = "tourists">
+  <area shape="rect" coords="0,300,350,460" href = "https://en.wikipedia.org/wiki/Grand_Canal_(Venice)" alt="Water" onclick="mywater()" title = "water area - Venice canon">
+  <!--  circle image map links -->
+  <area shape="circle" coords="140,250,15" href = "https://en.wikipedia.org/wiki/Gondola" alt="Boat" onclick="myboat()" title = "Gondola">
+  <area shape="circle" coords="120,150,15" href = "https://www.yatra.com/international-tourism/venice/people" alt="People" onclick="mypeople()" title = "Italian">
+
+</map>
+
+
+<!-- an introduction to show my links, where are links are  -->
+<p>This is a watercolour painting of mine to record Venice scene. Hope Italy gets well this year.
+<br>
+I have set 5 image maps links in my painting. You can try to click the canal water, the Venice tourists, 
+the sky, the Italian
+people who is paddling the boat, the Venice boat which is called Gondola and the Venice main building. 
+<br>There is a label shown for each image map when 
+hover. 
+<br>Also, it will give hints with a written javascript alert window to tell you if you click the right stuff
+, and after that it will jump to different webpages with
+introductions of these elements in Venice.
+ </p>
+
+<div class="clear"></div>
+
+<!--  the script of the alert window when we click the image map -->
+<script>
+function mywater() {
+  alert("You clicked the water!");
+}
+
+function myboat() {
+  alert("You clicked the boat!");
+}
+
+function mybuilding() {
+  alert("You clicked the building!");
+}
+function mysky() {
+  alert("You clicked the sky!");
+}
+function mypeople() {
+  alert("You clicked the people!");
+}
+</script>
+
+<!-- the footer-->
+<hr>
+ <!-- back to my index page and all the other pages-->
+ <div class="footer">
+
+<a href="../index.html">Index</a>
+
+<br>
+
+<a href="Passion.html">My Passion</a>
+
+<br>
+
+<a href="ImageMap.html">Image Map</a>
+
+<br>
+
+<a href="ImageGallery.html">Image Gallery</a>
+
+<br>
+
+<a href="Storyboard.html">Story Board</a>
+
+<br>
+
+<a href="Video.html">Video</a>
+
+<br>
+
+<a href="SourceLog.html">Source Log</a>
+
+<br>
+
+<a href="SiteMap.html">Site Map</a>
+
+<br>
+
+<a href="Feedback.html">Feedback</a>
+<br>
+
+<a href="DrawingBoard.html">Draw board</a>
+
+<br>
+
+<a href="Reflection.html">Reflection</a>
+</div>
+</html>

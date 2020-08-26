@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title> Me and My Passion </title>
+<link rel="stylesheet" href="pages/style.css">
+ <!-- use css file in the pages dir to format this webpage -->
+</head>
+
+<div id = "switch">
+  <a href="index_night.html">Night Mode</a>
+  <!-- the button change is to switch from the day mode to night mode -->
+</div>
+
+<h1>Welcome to Zeruo's Website</h1>  
+
+
+<div id = "IndexIntro">
+
+<h2><a href= "pages/Passion.html#Introduction">Introduction to Zeruo</a></h2>
+  <!--  Link to the intro in the passion page-->
+  
+  
+  <img src="images/Me.png" alt="my photo" width="500">
+ 
+<p>This is Zeruo Liu's website. I am a Master of Computing student in ANU. 
+My research field is Mixed Reality including Virtual Reality and Augmented Reality.
+I am passionate about artistic design in 3D world like the application of 
+Minecraft in Virtual Reality World. 
+I am also enthusiastic with artistic designs, paintings and sketching in my spare time.
+I will share with you some of my drawings and paintings in this website. 
+My paintings 
+are mainly shown in image formats in the passion page.
+Please come to the detailed "My passion page".</p>
+
+
+  <div class="clear">
+  </div>
+  
+</div> 
+
+
+
+<div id = "IndexPassion">
+
+<h2> <a href = "pages/Passion.html"> My Hobbies </a> </h2>
+
+ <!--  Link to the detailed passion page with images and detailed introduction-->
+<p>I am passionate to different aspects of arts. 
+I am going to share some arts forms in terms of Watercolour paintings and pencil sketchings with you.
+These are the most familiar skills to me currently.</p>
+
+
+ <!-- briefly list the my hobbies -->
+
+  <ol>
+  <li> <a href = "pages/Passion.html#Painting"> Painting </a> 
+  <p>I drew Chinese painting years ago. Now I normally paint some watercolour in spare time this year. Here are a 
+  collection of my watercolour paintings. I am still on my way in practicing mixing colours.</p>
+  </li>
+  
+  <li> <a href = "pages/Passion.html#Sketching"> Sketching </a> 
+  
+  <p>Simple pencil sketching help me to understand the 3D structure of objects and how we visualise objects 
+  in 2D plane. </p>
+  </li>
+  
+  <li> <a href = "pages/Passion.html#ColourPencil"> Colour Pencil </a> 
+  <p>I learn colour pencil sketching by myself. It takes a lot of time to finish one colour pencil drawing, but
+  I still think it is the easiest way to draw colours on the paper. </p>
+  </li>
+
+  
+  </ol>
+ <!-- end of the hobby list -->  
+
+
+
+</div>
+
+ <!-- I set some links to the other website pages   -->
+<h3> <a href = "pages/ImageMap.html"> Image Map </a> </h3>
+<p>This website shows the image map with 5 labels.</p>
+
+<h3> <a href = "pages/ImageGallery.html"> Image Gallery </a> </h3>
+<p>This website shows the image gallery of my own paintings and sketching.</p>
+
+<h3> <a href = "pages/Video.html"> Video </a> </h3>
+<p>This website shows my self-made video.</p>
+
+<h3> <a href = "pages/Storyboard.html"> Storyboard </a> </h3>
+<p>This website contains a storyboard which is related to my video.</p>
+
+<h3> <a href = "pages/DrawingBoard.html"> DrawBoard </a> </h3>
+<p>You can use my draw-board to draw what you like after viewing my paintings and drawings.</p>
+
+<h3> <a href = "pages/SiteMap.html"> Site Map link </a> </h3>
+<p>This website contains a collection of all links.</p>
+  
+<h3> <a href = "pages/SourceLog.html"> Source Log link </a> </h3>
+<p>Source Log contains a table to list all of the sources used in this website.</p>
+
+<h3> <a href = "pages/Feedback.html"> Feedback </a> </h3>
+<p>You can give me feedbacks in terms of my works or website in this feedback page.</p>
+
+<h3> <a href = "pages/Reflection.html"> Reflection </a> </h3>
+<p>I give the reflection of learning web design and show the screenshots in this webpage.</p>
+
+
+
+</body>
+
+
+</html>

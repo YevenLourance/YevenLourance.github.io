@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Drawing Board</title>	
+	<link rel="stylesheet" href="style.css">
+	 <!-- use css file to format this webpage -->
+</head>
+
+<body>
+	
+	
+<h1>Drawing Board</h1>
+
+<div id="sketch">
+  <canvas id="paint"></canvas>
+  <!-- set a painting cavas for the drawing -->
+</div>
+
+<div id="settings"> Colours
+  <button onclick="getColor('blue');">Blue</button>
+  <button onclick="getColor('red');">Red</button>
+  <button onclick="getColor('green');">Green</button>
+  <button onclick="getColor('white');">White</button>
+  <button onclick="getColor('#333333');">Eraser</button>
+   <!-- buttons are set to choose the color -->
+   <br>
+
+  Brush Size
+  <button onclick="getSize('2');">Small</button>
+  <button onclick="getSize('5');">Med</button>
+  <button onclick="getSize('10');">Large</button>
+  <button onclick="getSize('20');">X Large</button>
+  <!-- buttons are set to choose the size of the drawing -->
+</div>	
+
+
+
+<script>
+	var canvas = document.getElementById('paint');
+var ctx = canvas.getContext('2d');
+ 
+var sketch = document.getElementById('sketch');
+var sketch_style = getComputedStyle(sketch);
+
+canvas.width = 600;
+canvas.height = 400;
+
+/* Set canvas size  */
+
+var mouse = {x: 0, y: 0};
+ 
+/* Mouse Capturing Work */
+canvas.addEventListener('mousemove', function(e) {
+  mouse.x = e.pageX - this.offsetLeft;
+  mouse.y = e.pageY - this.offsetTop;
+}, false);
+
+/* Drawing on Paint App */
+ctx.lineJoin = 'round';
+ctx.lineCap = 'round';
+
+ctx.strokeStyle = "red";
+
+
+function getColor(colour){ctx.strokeStyle = colour;}
+
+function getSize(size){ctx.lineWidth = size;}
+/* get specific size and colour for the painting*/
+ 
+canvas.addEventListener('mousedown', function(e) {
+    ctx.beginPath();
+    ctx.moveTo(mouse.x, mouse.y);
+ 
+    canvas.addEventListener('mousemove', onPaint, false);
+}, false);
+/* mouse on to start drawing, mouse move to paint in, mouse up to stop paint */
+ 
+canvas.addEventListener('mouseup', function() {
+    canvas.removeEventListener('mousemove', onPaint, false);
+}, false);
+ 
+var onPaint = function() {
+    ctx.lineTo(mouse.x, mouse.y);
+    ctx.stroke();
+};
+/* Drawing the lines */
+</script>	
+	
+<!-- the footer-->
+<hr>
+ <!-- back to my index page and all the other pages-->
+ <div class="footer">
+
+<a href="../index.html">Index</a>
+
+<br>
+
+<a href="Passion.html">My Passion</a>
+
+<br>
+
+<a href="ImageMap.html">Image Map</a>
+
+<br>
+
+<a href="ImageGallery.html">Image Gallery</a>
+
+<br>
+
+<a href="Storyboard.html">Story Board</a>
+
+<br>
+
+<a href="Video.html">Video</a>
+
+<br>
+
+<a href="SourceLog.html">Source Log</a>
+
+<br>
+
+<a href="SiteMap.html">Site Map</a>
+
+<br>
+
+<a href="Feedback.html">Feedback</a>
+
+<br>
+
+<a href="DrawingBoard.html">Draw board</a>
+
+<br>
+
+<a href="Reflection.html">Reflection</a>
+</div>
+
+</body>
+</html>
